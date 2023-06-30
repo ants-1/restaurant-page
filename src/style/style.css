@@ -13,8 +13,6 @@ body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-/* Header & Nav */
-
 header {
     display: flex;
     justify-content: space-between;
@@ -38,8 +36,13 @@ header button {
     padding: 10px 20px;
 }
 
-header .nav-btn.active {
+header button.active {
     border-bottom: 3px solid #fff;
+}
+
+header button.active:hover {
+    color: #fff;
+    cursor: default;
 }
 
 header button:hover {
@@ -47,8 +50,6 @@ header button:hover {
     color: #92B4EC;
     transition: all 0.2s ease-in-out;
 }
-
-/* Main content */
 
 .home {
     display: flex;
@@ -107,8 +108,79 @@ hr {
     height: 90vh;
 }
 
-img {
+.right img {
     object-fit: cover;
     height: 100%;
     width: 100%;
 }
+
+h2 {
+    text-align: center;
+    font-size: 48px;
+    margin: 50px;
+}
+
+.menu {
+    display: grid;
+    height: 400px;
+    grid-template-columns: auto auto;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+    gap: 50px;
+    margin: 50px;
+}
+
+.item {
+    display: flex;
+    gap: 20px;
+    background-color: #A09F9F;
+    border-radius: 10px;
+    padding: 20px;
+    width: 350px;
+}
+
+.food {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #fff;
+
+}
+
+.food-img {
+    height: 150px;
+    width: 150px;
+    background-color: black;
+    border-radius: 10px;
+}
+
+.info {
+    height: 500px;
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 50px;
+    background-color: #A09F9F;
+    border-radius: 10px;
+}
+
+.info-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    color: #fff;
+}
+
+.location {
+    background-color: black;
+    height: 300px;
+    border-radius: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+    .menu {
+        margin-top: 200px;
+        grid-template-columns: auto;
+    }
+  }

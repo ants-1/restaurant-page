@@ -1,18 +1,15 @@
 function createHome() {
     const home = createDiv('home');
     const leftContainer = createDiv('left');
-    const rightContainer = document.createElement('div');
-    const container = document.createElement('div');
-    const logo = document.createElement('div');
+    const rightContainer = createDiv('right');
+    const container = createDiv('container');
+    const logo = createDiv('logo');
     const hr = document.createElement('hr');
     const hr2 = document.createElement('hr');
     const h3 = document.createElement('h3');
     const btn = document.createElement('button');
     const img = document.createElement('img');
 
-    rightContainer.classList.add('right');
-    container.classList.add('container');
-    logo.classList.add('logo');
     btn.classList.add('order');
 
     logo.textContent = 'Food bits'
@@ -33,15 +30,16 @@ function createHome() {
     return home;
 }
 
-function createDiv(text) {
+function createDiv(className) {
     const div = document.createElement('div');
-    div.classList.add(text);
+    div.classList.add(className);
 
     return div;
 }
 
 function loadHome() {
     const main = document.getElementById('main');
+    main.textContent = "";
     main.appendChild(createHome());
 }
 

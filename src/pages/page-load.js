@@ -1,4 +1,6 @@
 import loadHome from "./home";
+import loadMenu from "./menu";
+import loadContact from "./contact";
 
 function createHeader() {
     const header = document.createElement('header');
@@ -11,10 +13,11 @@ function createHeader() {
     return header;
 }
 
-function createBtn(text) {
+function createBtn(text, id) {
     const btn = document.createElement('button');
 
     btn.classList.add('nav-btn');
+    btn.setAttribute('id', id);
     btn.textContent = text;
 
     return btn;
@@ -23,15 +26,45 @@ function createBtn(text) {
 function createNav() {
     const nav = document.createElement('nav');
 
-    const homeBtn = createBtn('Home');
-    const menuBtn = createBtn('Menu');
-    const contactBtn = createBtn('Contact us');
+    const homeBtn = createBtn('Home', 'home');
+    const menuBtn = createBtn('Menu', 'menu');
+    const contactBtn = createBtn('Contact us', 'contact');
+
+    homeBtn.addEventListener('click', () => {
+        if (homeBtn.classList.contains('active')) return;
+        setActiveBtn(homeBtn);
+        loadHome();
+    });
+
+    menuBtn.addEventListener('click', () => {
+        if (menuBtn.classList.contains('active')) return;
+        setActiveBtn(menuBtn);
+        loadMenu();
+    });
+
+    contactBtn.addEventListener('click', () => {
+        if (contactBtn.classList.contains('active')) return;
+        setActiveBtn(contactBtn);
+        loadContact();
+    });
 
     nav.appendChild(homeBtn);
     nav.appendChild(menuBtn);
     nav.appendChild(contactBtn);
 
     return nav;
+}
+
+function setActiveBtn(button) {
+    const buttons = document.querySelectorAll(".nav-btn");
+
+    buttons.forEach((btn) => {
+        if (btn !== button) {
+            btn.classList.remove("active");
+        }
+    });
+
+    button.classList.add("active");
 }
 
 function createMain() {
@@ -45,7 +78,8 @@ function loadPage() {
 
     content.appendChild(createHeader());
     content.appendChild(createMain());
+    setActiveBtn(document.querySelector('.nav-btn'));
     loadHome();
 }
 
-export default loadPage();
+export default loadPage;
