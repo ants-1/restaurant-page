@@ -3,16 +3,18 @@ function contact() {
     const h2 = document.createElement('h2');
     const infoConatiner = createDiv('info-container');
     const info = createDiv('info');
-    const address = createPara('address');
-    const openingTime = createPara('open');
-    const location = createDiv('location');
+    const phoneNum = createPara('phone-num');
+    const openingTime = createPara('opening-time');
+    const location = document.createElement('img');
 
     h2.textContent = 'Contact us';
-    address.textContent = 'Address';
-    openingTime.textContent = 'Opening Time';
+    phoneNum.textContent = '☎️  12345 123 3212';
+    openingTime.textContent = 'Opening Time:  Mon - Sat, 9:00 - 18:00';
+    location.classList.add('location');
+    location.src = '../src/img/address.png';
 
     contact.appendChild(h2);
-    info.appendChild(address);
+    info.appendChild(phoneNum);
     info.appendChild(openingTime);
     info.appendChild(location)
     infoConatiner.appendChild(info);

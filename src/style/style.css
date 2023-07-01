@@ -47,7 +47,7 @@ header button.active:hover {
 
 header button:hover {
     cursor: pointer;
-    color: #92B4EC;
+    color: #c1d2ec;
     transition: all 0.2s ease-in-out;
 }
 
@@ -127,7 +127,7 @@ h2 {
     justify-content: space-evenly;
     align-content: space-evenly;
     gap: 50px;
-    margin: 50px;
+    margin: 100px;
 }
 
 .item {
@@ -136,22 +136,38 @@ h2 {
     background-color: #A09F9F;
     border-radius: 10px;
     padding: 20px;
-    width: 350px;
+    width: 400px;
+    height: 225px;
+}
+
+.item .food-img {
+    align-self: center;
 }
 
 .food {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    inline-size: 200px;
+    overflow-wrap: break-word;
     color: #fff;
-
 }
 
 .food-img {
     height: 150px;
     width: 150px;
+    object-fit: cover;
     background-color: black;
     border-radius: 10px;
+}
+
+.food-title {
+    font-weight: 900;
+}
+
+.food-price {
+    font-weight: 900;
+    color: #c1d2ec;
 }
 
 .info {
@@ -175,12 +191,13 @@ h2 {
 .location {
     background-color: black;
     height: 300px;
+    object-fit: cover;
     border-radius: 10px;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 830px) {
     .menu {
-        margin-top: 200px;
+        margin-top: 375px;
         grid-template-columns: auto;
     }
   }
