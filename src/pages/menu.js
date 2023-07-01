@@ -4,25 +4,25 @@ function menu() {
       "Smoked salmon & spinach gratin",
       "Enjoy a Swedish-inspired smoked salmon and spinach gratin. Served with potatoes and roasted beets.",
       "7.00",
-      "../src/img/salmon.png",
+      "../dist/img/biscuits.png"
     ],
     item2: [
       "Shortbread biscuits",
       "Take a break and relax with a crumbly and wonderful shortbread biscuit.",
       "1.00",
-      "../src/img/biscuits.png",
+      "../dist/img/biscuits.png",
     ],
     item3: [
       "Banana muffins",
       "Savour a delicious banana muffin any time of the day.",
       "3.30",
-      "../src/img/banana-muffin.png",
+      "../dist/img/banana-muffin.png",
     ],
     item4: [
       "Chicken and Rice",
       "Relish a tasty and healthy meal.",
       "6.00",
-      "../src/img/chicken-rice.png",
+      "../dist/img/chicken-rice.png",
     ],
   };
 

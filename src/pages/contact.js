@@ -11,7 +11,7 @@ function contact() {
     phoneNum.textContent = '☎️  12345 123 3212';
     openingTime.textContent = 'Opening Time:  Mon - Sat, 9:00 - 18:00';
     location.classList.add('location');
-    location.src = '../src/img/address.png';
+    location.src = '../dist/img/address.png';
 
     contact.appendChild(h2);
     info.appendChild(phoneNum);

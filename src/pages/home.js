@@ -15,7 +15,7 @@ function createHome() {
     logo.textContent = 'Food bits'
     h3.textContent = 'Dig in and eat healthy delicious food';
     btn.textContent = 'Order';
-    img.src = '../src/img/hero-food-img-1.png';
+    img.src = '../dist/img/hero-food-img-1.png';
 
     leftContainer.appendChild(hr);
     leftContainer.appendChild(container);
