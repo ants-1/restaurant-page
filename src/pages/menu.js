@@ -4,7 +4,7 @@ function menu() {
       "Smoked salmon & spinach gratin",
       "Enjoy a Swedish-inspired smoked salmon and spinach gratin. Served with potatoes and roasted beets.",
       "7.00",
-      "../dist/img/biscuits.png"
+      "../dist/img/salmon.png"
     ],
     item2: [
       "Shortbread biscuits",
