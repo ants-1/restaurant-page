@@ -1,7 +1,11 @@
 :root {
-    --header-bg: #A09F9F;
-    --font-color: #ffffff;
-    --logo-color: #92B4EC;
+    --grey:  #A09F9F;
+    --white: #ffffff;
+    --light-blue: #92B4EC;
+    --light-grey-blue: #c1d2ec;
+    --black: #000000;
+
+    --br: 10px;
 }
 
 * {
@@ -19,8 +23,8 @@ header {
     align-items: center;
     height: 120px;
     padding: 0 30px;
-    background-color: var(--header-bg);
-    color: var(--font-color);
+    background-color: var(--grey);
+    color: var(--white);
 }
 
 header h1 {
@@ -30,24 +34,24 @@ header h1 {
 header button {
     text-decoration: none;
     font-size: 20px;
-    color: var(--font-color);
-    background-color: #A09F9F;
+    color: var(--white);
+    background-color: var(--grey);
     border: none;
     padding: 10px 20px;
 }
 
 header button.active {
-    border-bottom: 3px solid #fff;
+    border-bottom: 3px solid var(--white);
 }
 
 header button.active:hover {
-    color: #fff;
+    color: var(--white);
     cursor: default;
 }
 
 header button:hover {
     cursor: pointer;
-    color: #c1d2ec;
+    color: var(--light-grey-blue);
     transition: all 0.2s ease-in-out;
 }
 
@@ -65,7 +69,7 @@ header button:hover {
 }
 
 hr {
-    border: 1px solid black;
+    border: 1px solid var(--black);
 }
 
 .container {
@@ -74,7 +78,7 @@ hr {
 
 .logo {
     font-size: 24px;
-    color: var(--logo-color);
+    color: var(--light-blue);
 }
 
 .container h3 {
@@ -83,10 +87,10 @@ hr {
 }
 
 .container button {
-    background-color: #92B4EC;
-    color: #fff;
+    background-color: var(--light-blue);
+    color: var(--white);
     border: none;
-    border-radius: 10px;
+    border-radius: var(--br);
     width: 150px;
     height: 40px;
     font-size: 20px;
@@ -133,7 +137,7 @@ h2 {
 .item {
     display: flex;
     gap: 20px;
-    background-color: #A09F9F;
+    background-color: var(--grey);
     border-radius: 10px;
     padding: 20px;
     width: 400px;
@@ -150,15 +154,15 @@ h2 {
     justify-content: space-between;
     inline-size: 200px;
     overflow-wrap: break-word;
-    color: #fff;
+    color: var(--white);
 }
 
 .food-img {
     height: 150px;
     width: 150px;
     object-fit: cover;
-    background-color: black;
-    border-radius: 10px;
+    background-color: var(--black);
+    border-radius: var(--br);
 }
 
 .food-title {
@@ -167,7 +171,7 @@ h2 {
 
 .food-price {
     font-weight: 900;
-    color: #c1d2ec;
+    color: var(--light-grey-blue);
 }
 
 .info {
@@ -177,22 +181,22 @@ h2 {
     flex-direction: column;
     justify-content: space-between;
     padding: 50px;
-    background-color: #A09F9F;
-    border-radius: 10px;
+    background-color: var(--grey);
+    border-radius: var(--br);
 }
 
 .info-container {
     display: flex;
     justify-content: center;
     margin-bottom: 50px;
-    color: #fff;
+    color: var(--white);
 }
 
 .location {
-    background-color: black;
+    background-color: var(--black);
     height: 300px;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: var(--br);
 }
 
 @media only screen and (max-width: 830px) {
